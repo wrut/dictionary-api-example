@@ -42,25 +42,25 @@ bird</code></pre>
     <tr>
       <td>dog</td>
       <td>a domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, and a barking, howling, or whining voice.</td>
-      <td>The ___ chased after the ball.</td>
+      <td>The dog chased after the ball.</td>
       <td>The ___ chased after the ball.</td>
     </tr>
     <tr>
       <td>cat</td>
       <td>a small domesticated carnivorous mammal with soft fur, a short snout, and retractile claws.</td>
-      <td>The ___ sat on the windowsill.</td>
+      <td>The cat sat on the windowsill.</td>
       <td>The ___ sat on the windowsill.</td>
       </tr>
       <tr>
   <td>fish</td>
   <td>a limbless cold-blooded vertebrate animal with gills and fins and living wholly in water.</td>
-  <td>The ___ swam in the pond.</td>
+  <td>The fish swam in the pond.</td>
   <td>The ___ swam in the pond.</td>
 </tr>
 <tr>
   <td>bird</td>
   <td>a warm-blooded egg-laying vertebrate distinguished by the possession of feathers, wings, and a beak and (typically) by being able to fly.</td>
-  <td>The ___ sang in the tree.</td>
+  <td>The bird sang in the tree.</td>
   <td>The ___ sang in the tree.</td>
 </tr>
 </tbody>
