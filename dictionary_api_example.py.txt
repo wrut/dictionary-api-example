@@ -31,13 +31,23 @@ for word in word_list:
             meanings = data[0]["meanings"]
             for meaning in meanings:
                 definition = meaning["definitions"][0]["definition"]
+
+                # Check if the example sentence exists
                 if "example" in meaning["definitions"][0]:
                     example_sentence = meaning["definitions"][0]["example"]
+                elif len(meaning["definitions"]) > 1 and "example" in meaning["definitions"][1]:
+                    example_sentence = meaning["definitions"][1]["example"]
+                elif len(meaning["definitions"]) > 2 and "example" in meaning["definitions"][2]:
+                    example_sentence = meaning["definitions"][2]["example"]
                 else:
                     example_sentence = ""
 
+                # Skip adding the word if there is no example sentence
+                if example_sentence == "":
+                    print(f"This word '{word}' with this definition: '{definition}' doesn't have an example sentence.")
+                    continue
                 # Replace the word in the example sentence with a blank space
-                blank_sentence = example_sentence.replace(word, "___")
+                blank_sentence = example_sentence.lower().replace(word, "___").capitalize()
 
                 # Add a new row to the sheet with the word, its definition, example sentence, and blank sentence
                 sheet.append([word, definition, example_sentence, blank_sentence])
