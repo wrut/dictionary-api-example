@@ -1,5 +1,6 @@
 import openpyxl
 import requests
+import re
 
 # Open the text file containing the words
 with open("words.txt") as file:
@@ -47,7 +48,9 @@ for word in word_list:
                     print(f"This word '{word}' with this definition: '{definition}' doesn't have an example sentence.")
                     continue
                 # Replace the word in the example sentence with a blank space
-                blank_sentence = example_sentence.lower().replace(word, "___").capitalize()
+                # Replace the word in the example sentence in a case-insensitive manner
+                pattern = re.compile(rf"\b{re.escape(word)}\b", re.IGNORECASE)
+                blank_sentence = pattern.sub("___", example_sentence)
 
                 # Add a new row to the sheet with the word, its definition, example sentence, and blank sentence
                 sheet.append([word, definition, example_sentence, blank_sentence])
